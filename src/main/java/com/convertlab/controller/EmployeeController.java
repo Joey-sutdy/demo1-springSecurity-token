@@ -36,7 +36,7 @@ public class EmployeeController {
     @Autowired
     public IEmployeeService employeeService;
 
-    @Secured("ROLE_user")
+
     @ApiOperation("新增用户信息")
     @PostMapping("/insert")
     @ResponseBody

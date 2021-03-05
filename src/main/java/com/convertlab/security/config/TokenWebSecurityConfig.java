@@ -35,6 +35,7 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.exceptionHandling().authenticationEntryPoint(new UnauthorizedEntryPoint()).and().csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/security/login.html").permitAll()
                 .antMatchers("/public/**").permitAll()
                 .antMatchers("/convertlab/employee/insert").hasAnyRole("ADMIN")
                 .antMatchers("/convertlab/employee/update").hasAnyRole("ADMIN")
